@@ -16,7 +16,7 @@ export class Wikia {
               public storage: Storage) {
 
     if (!platform.is('cordova')) {
-      this.api = 'http://cors.kpots.com/http://starwars.wikia.com/api/v1/';
+      this.api = 'https://cors.kpots.com/http://starwars.wikia.com/api/v1/';
     }
 
   }
