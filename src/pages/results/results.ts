@@ -8,7 +8,9 @@ import {NavController, NavParams} from 'ionic-angular';
 export class ResultsPage {
 
   results: any = {};
+
   score: number = 0;
+  scoreLimit: number = 0.7;
 
   constructor(public params: NavParams,
               public navCtrl: NavController) {

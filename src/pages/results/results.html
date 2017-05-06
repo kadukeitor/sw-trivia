@@ -8,12 +8,12 @@
 
 <ion-content padding text-center>
 
-  <div *ngIf="score < 0.8">
+  <div *ngIf="score < scoreLimit">
     <p padding>"In my experience, there is no such thing as luck..."</p>
     <img src="./assets/img/lost.gif"/>
   </div>
 
-  <div *ngIf="score >=0.8">
+  <div *ngIf="score >= scoreLimit">
     <p padding>"You do have your moments. Not many, but you have them."</p>
     <img src="./assets/img/victory.gif"/>
   </div>

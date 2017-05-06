@@ -46,11 +46,13 @@ export class Wikia {
               this.storage.set(this.prefix + "-thumbnail-" + key, {url: item.thumbnail, exp: cacheExpiration});
               done(null, item.thumbnail);
             }
-            else if (item && (item.abstract.indexOf('REDIRECT') > -1 || item.abstract.indexOf('redirect') > -1)) {
-              let newTitle = item.abstract.replace('REDIRECT ', '');
-              newTitle = newTitle.replace('redirect ', '');
-              this.getThumbnail(newTitle, done);
-            }
+            // else if (item && (item.abstract.indexOf('REDIRECT') > -1 || item.abstract.indexOf('redirect') > -1)) {
+            //   let newTitle = item.abstract.replace('REDIRECT ', '');
+            //   newTitle = newTitle.replace('redirect ', '');
+            //   setTimeout(() => {
+            //     this.getThumbnail(newTitle, done);
+            //   }, 1000);
+            // }
             else {
               done(null, null);
             }

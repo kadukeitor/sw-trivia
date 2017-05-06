@@ -19,7 +19,6 @@ export class SWAPI {
   planets: any = [];
 
 
-
   constructor(public http: Http,
               public storage: Storage) {
   }
@@ -166,7 +165,7 @@ export class SWAPI {
   randomPeople(done) {
     let total = this.people.length;
     let selected = Math.floor(Math.random() * total);
-    let character = this.people[selected];
+    let character = Object.assign({}, this.people[selected]);
     // index
     character.index = selected;
     // films
@@ -244,7 +243,7 @@ export class SWAPI {
   randomStarShips(done) {
     let total = this.starships.length;
     let selected = Math.floor(Math.random() * total);
-    let starship = this.starships[selected];
+    let starship = Object.assign({}, this.starships[selected]);
     // index
     starship.index = selected;
     // films
@@ -286,7 +285,7 @@ export class SWAPI {
   randomVehicle(done) {
     let total = this.vehicles.length;
     let selected = Math.floor(Math.random() * total);
-    let vehicle = this.vehicles[selected];
+    let vehicle = Object.assign({}, this.vehicles[selected]);
     // index
     vehicle.index = selected;
     // films
@@ -328,7 +327,7 @@ export class SWAPI {
   randomSpecie(done) {
     let total = this.species.length;
     let selected = Math.floor(Math.random() * total);
-    let specie = this.species[selected];
+    let specie = Object.assign({}, this.species[selected]);
     // index
     specie.index = selected;
     // films
@@ -374,7 +373,7 @@ export class SWAPI {
   randomPlanet(done) {
     let total = this.planets.length;
     let selected = Math.floor(Math.random() * total);
-    let planet = this.planets[selected];
+    let planet = Object.assign({}, this.planets[selected]);
     // index
     planet.index = selected;
     // films
