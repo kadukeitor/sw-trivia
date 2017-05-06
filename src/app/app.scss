@@ -25,6 +25,11 @@
 body {
   background-color: black;
   font: 700 1em "News Cycle", sans-serif;
-  color:yellow;
+  color: yellow;
   letter-spacing: .15em;
+}
+
+.scroll-content {
+  margin: auto;
+  max-width: 520px !important;
 }
