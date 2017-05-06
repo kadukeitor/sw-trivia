@@ -1,0 +1,38 @@
+page-results {
+
+  .toolbar-background,
+  .toolbar-title {
+    background-color: black !important;
+    color: #ffd54e !important;
+  }
+
+  .progress {
+    width: 0;
+    height: 5px;
+    background-color: #ffd54e;
+  }
+
+  ion-content {
+    background: url("../assets/img/stars-bg.jpg") center center;
+  }
+
+  ion-title,
+  ion-content,
+  ion-list,
+  ion-item {
+    background-color: black !important;
+    color: #ffd54e !important;
+  }
+
+  button {
+    color: #ffd54e !important;
+    z-index: 1000;
+  }
+
+  img {
+    border: 2px solid #ffd54e;
+    width: 240px;
+    height: 240px;
+  }
+
+}

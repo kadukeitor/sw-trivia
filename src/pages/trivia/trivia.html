@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ resource.title }}
+    </ion-title>
+  </ion-navbar>
+  <div class="progress" [ngStyle]="{'width.%':progress}"></div>
+</ion-header>
+
+<ion-content padding>
+
+  <div text-center padding>
+
+    <ion-slides pager>
+
+      <ion-slide *ngIf="image">
+        <img *ngIf="image" [src]="image"/>
+      </ion-slide>
+
+      <ion-slide *ngIf="selected.films && selected.films.length">
+        <h3>Film(s)</h3>
+        <p *ngFor="let film of selected.films;">{{ film.title }}</p>
+      </ion-slide>
+
+      <ion-slide *ngIf="selected.starships && selected.starships.length">
+        <h3>Starship(s)</h3>
+        <p *ngFor="let starship of selected.starships;">{{ starship.name }}</p>
+      </ion-slide>
+
+      <ion-slide *ngIf="selected.vehicles && selected.vehicles.length">
+        <h3>Vehicle(s)</h3>
+        <p *ngFor="let vehicle of selected.vehicles;">{{ vehicle.name }}</p>
+      </ion-slide>
+
+      <ion-slide *ngIf="selected.species && selected.species.length">
+        <h3>Specie(s)</h3>
+        <p *ngFor="let specie of selected.species;">{{ specie.name }}</p>
+      </ion-slide>
+
+      <ion-slide *ngIf="selected.planets && selected.planets.length">
+        <h3>Planet(s)</h3>
+        <p *ngFor="let planet of selected.planets;">{{ planet.name }}</p>
+      </ion-slide>
+
+      <ion-slide *ngIf="selected.homeworld">
+        <h3>Home</h3>
+        <p>{{ selected.homeworld.name }}</p>
+      </ion-slide>
+
+      <ion-slide *ngIf="selected.residents && selected.residents.length">
+        <h3>Resident(s)</h3>
+        <p *ngFor="let resident of selected.residents;">{{ resident.name }}</p>
+      </ion-slide>
+
+      <ion-slide *ngIf="selected.people && selected.people.length">
+        <h3>People</h3>
+        <p *ngFor="let people of selected.people;">{{ people.name }}</p>
+      </ion-slide>
+
+      <ion-slide *ngIf="selected.pilots && selected.pilots.length">
+        <h3>Pilot(s)</h3>
+        <p *ngFor="let people of selected.pilots;">{{ people.name }}</p>
+      </ion-slide>
+
+    </ion-slides>
+
+  </div>
+
+  <ion-list radio-group no-lines [(ngModel)]="answer">
+    <ion-item *ngFor="let option of options;let i = index;">
+      <ion-label>{{ option.name }}</ion-label>
+      <ion-radio [value]="option.url"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar text-center>
+    <button ion-button large clear icon-right (click)="next()" [disabled]="(answer == -1)">
+      NEXT
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  </ion-toolbar>
+</ion-footer>

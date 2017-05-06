@@ -1,0 +1,46 @@
+page-home {
+
+  .stars-wars-title {
+    margin: auto;
+    text-align: center;
+  }
+
+  .logo {
+    color: #000;
+    font-family: StarWars;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 86%;
+    text-shadow: -2px -2px 0 #ffd54e, -2px -1px 0 #ffd54e, -2px 0 0 #ffd54e, -2px 1px 0 #ffd54e, -2px 2px 0 #ffd54e, -1px -2px 0 #ffd54e, -1px -1px 0 #ffd54e, -1px 0 0 #ffd54e, -1px 1px 0 #ffd54e, -1px 2px 0 #ffd54e, 0 -2px 0 #ffd54e, 0 -1px 0 #ffd54e, 0 0 0 #ffd54e, 0 1px 0 #ffd54e, 0 2px 0 #ffd54e, 1px -2px 0 #ffd54e, 1px -1px 0 #ffd54e, 1px 0 0 #ffd54e, 1px 1px 0 #ffd54e, 1px 2px 0 #ffd54e, 2px -2px 0 #ffd54e, 2px -1px 0 #ffd54e, 2px 0 0 #ffd54e, 2px 1px 0 #ffd54e, 2px 2px 0 #ffd54e;
+  }
+
+
+  .toolbar-background,
+  .toolbar-title {
+    background-color: black !important;
+    color: #ffd54e !important;
+  }
+
+  .progress {
+    width: 0;
+    height: 5px;
+    background-color: #ffd54e;
+  }
+
+  ion-content {
+    background: url("../assets/img/stars-bg.jpg") center center;
+  }
+
+  ion-title,
+  ion-content,
+  ion-list,
+  ion-item {
+    background-color: black !important;
+    color: #ffd54e !important;
+  }
+
+  button {
+    color: #ffd54e !important;
+  }
+
+}

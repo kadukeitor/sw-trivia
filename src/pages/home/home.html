@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <div class="star-wars-intro" *ngIf="!intro">
+    <p class="intro-text">
+      A day ago ...
+    </p>
+    <h2 class="main-logo">
+      <img src="./assets/img/logo.png">
+    </h2>
+
+    <div class="main-content">
+      <div class="title-content">
+        <p class="content-header">EPISODES I-VII<br/>The Trivia Game</p>
+        <br>
+        <p class="content-body">
+          After years of galactic silence, civilization is on the brink of a new Star Wars release.
+          It is time to be prepared for this events, and nothing is better than a Trivia to shake our
+          Midi-chlorians.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="stars-wars-title" *ngIf="intro">
+    <p class="logo">
+      STAR WARS
+    </p>
+    <h3>TRIVIA</h3>
+  </div>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar text-center>
+    <button ion-button large clear icon-right (click)="start()" [disabled]="loading">
+      START
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  </ion-toolbar>
+</ion-footer>

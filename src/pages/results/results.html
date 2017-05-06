@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Results
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center>
+
+  <div *ngIf="score < 0.8">
+    <p padding>"In my experience, there is no such thing as luck..."</p>
+    <img src="./assets/img/lost.gif"/>
+  </div>
+
+  <div *ngIf="score >=0.8">
+    <p padding>"You do have your moments. Not many, but you have them."</p>
+    <img src="./assets/img/victory.gif"/>
+  </div>
+
+  <p>Your score was</p>
+
+  <h1> {{ score }}</h1>
+
+</ion-content>
