@@ -97,7 +97,7 @@ export class TriviaPage {
         });
       })
 
-    }, 1000);
+    }, 500);
 
   }
 
