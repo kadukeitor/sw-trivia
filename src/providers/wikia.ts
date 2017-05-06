@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
+import {Platform} from 'ionic-angular';
 import 'rxjs/add/operator/map';
 
 import {Storage} from '@ionic/storage';
@@ -7,11 +8,17 @@ import {Storage} from '@ionic/storage';
 @Injectable()
 export class Wikia {
 
-  private api: string = 'http://cors.kpots.com/http://starwars.wikia.com/api/v1/';
+  private api: string = 'http://starwars.wikia.com/api/v1/';
   private prefix: string = 'wikia';
 
-  constructor(public http: Http,
+  constructor(public platform: Platform,
+              public http: Http,
               public storage: Storage) {
+
+    if (!platform.is('cordova')) {
+      this.api = 'http://cors.kpots.com/http://starwars.wikia.com/api/v1/';
+    }
+
   }
 
   getThumbnail(title, done) {
@@ -42,8 +49,6 @@ export class Wikia {
             else if (item && (item.abstract.indexOf('REDIRECT') > -1 || item.abstract.indexOf('redirect') > -1)) {
               let newTitle = item.abstract.replace('REDIRECT ', '');
               newTitle = newTitle.replace('redirect ', '');
-              // newTitle = newTitle.replace('This is a redirect from an alternate name to a more common or factual...', '');
-              // newTitle = newTitle.replace('This is a redirect from a title that is a partial name to a full...', '');
               this.getThumbnail(newTitle, done);
             }
             else {

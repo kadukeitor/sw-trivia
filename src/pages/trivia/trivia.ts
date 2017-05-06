@@ -48,18 +48,22 @@ export class TriviaPage {
   }
 
   prepareQuestion(resourceId) {
+    this.resource = {};
+    this.selected = {};
+    this.image = null;
+    this.options = [];
+    //
     if (!resourceId) {
       resourceId = this.generateRandom(0, this.resources.length - 1, []);
     }
     this.resource = this.resources[resourceId];
     let resource = this.swapi[this.resource.id];
     this.swapi.random(this.resource.id, (err, random) => {
-      this.selected = random;
       this.wikia.getThumbnail(random.name, (err, image) => {
         if (image) {
+          this.selected = random;
           this.image = image;
           let options = [];
-
           let index_0 = random.index;
           options[0] = resource[index_0];
           let index_1 = this.generateRandom(0, resource.length - 1, [index_0]);

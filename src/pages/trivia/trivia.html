@@ -11,6 +11,8 @@
 
   <div text-center padding>
 
+    <div class="spinner" *ngIf="!image"></div>
+
     <ion-slides pager>
 
       <ion-slide *ngIf="image">
