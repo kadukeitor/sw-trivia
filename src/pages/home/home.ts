@@ -29,8 +29,10 @@ export class HomePage {
   }
 
   start() {
-    this.intro = true;
-    this.navCtrl.push(TriviaPage);
+    this.navCtrl.push(TriviaPage)
+      .then(() => {
+        this.intro = true;
+      });
   }
 
 }

@@ -20,6 +20,16 @@
 
   <p>Your score was</p>
 
-  <h1> {{ score }}</h1>
+  <h1 class="score">{{ score }}
+    <small>/ 100</small>
+  </h1>
+
+  <div *ngIf="score < scoreLimit">
+    <p padding>"I find your lack of faith disturbing."</p>
+  </div>
+
+  <div *ngIf="score >= scoreLimit">
+    <p padding>" Great , you will be a Jedi Master soon!"</p>
+  </div>
 
 </ion-content>

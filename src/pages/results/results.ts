@@ -10,7 +10,7 @@ export class ResultsPage {
   results: any = {};
 
   score: number = 0;
-  scoreLimit: number = 0.7;
+  scoreLimit: number = 70;
 
   constructor(public params: NavParams,
               public navCtrl: NavController) {
@@ -21,7 +21,8 @@ export class ResultsPage {
     this.results.forEach(result => {
       score += ((result.correct == true) ? 1 : 0)
     });
-    this.score = (score / this.results.length);
+
+    this.score = Math.floor(((score / this.results.length) * 100));
 
   }
 
