@@ -8,7 +8,7 @@ import {Storage} from '@ionic/storage';
 @Injectable()
 export class SWAPI {
 
-  api: string = 'http://swapi.co/api';
+  api: string = 'https://swapi.co/api';
   prefix: string = 'swapi';
 
   people: any = [];
