@@ -6,15 +6,15 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding text-center>
+<ion-content padding-horizontal text-center>
 
   <div *ngIf="score < scoreLimit">
-    <p padding>"In my experience, there is no such thing as luck..."</p>
+    <p>"In my experience, there is no such thing as luck..."</p>
     <img src="./assets/img/lost.gif"/>
   </div>
 
   <div *ngIf="score >= scoreLimit">
-    <p padding>"You do have your moments. Not many, but you have them."</p>
+    <p>"You do have your moments. Not many, but you have them."</p>
     <img src="./assets/img/victory.gif"/>
   </div>
 
@@ -25,11 +25,23 @@
   </h1>
 
   <div *ngIf="score < scoreLimit">
-    <p padding>"I find your lack of faith disturbing."</p>
+    <p>"I find your lack of faith disturbing."</p>
   </div>
 
   <div *ngIf="score >= scoreLimit">
-    <p padding>" Great , you will be a Jedi Master soon!"</p>
+    <p>"Great , you will be a Jedi Master soon!"</p>
   </div>
 
+  <img #image [src]="(score < scoreLimit) ? './assets/img/vader.png' : './assets/img/lightsaber.png' " hidden/>
+  <canvas #canvas hidden></canvas>
+
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar text-center>
+    <button ion-button large clear icon-left (click)="share()">
+      <ion-icon name="share"></ion-icon>
+      SHARE RESULTS
+    </button>
+  </ion-toolbar>
+</ion-footer>

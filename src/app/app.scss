@@ -25,11 +25,24 @@
 body {
   background-color: black;
   font: 700 1em "News Cycle", sans-serif;
-  color: yellow;
+  color: #ffd54e;
   letter-spacing: .15em;
 }
 
 .scroll-content {
   margin: auto;
   max-width: 520px !important;
+}
+
+.action-sheet-container {
+  background-color: black !important;
+}
+
+.action-sheet-button.activated {
+  background-color: #1f1f1f !important;
+}
+
+.action-sheet-title,
+.action-sheet-button {
+  color: #ffd54e !important;
 }
