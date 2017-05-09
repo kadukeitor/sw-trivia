@@ -2,7 +2,7 @@
   "name": "sw-trivia",
   "version": "0.0.0",
   "author": "Star Wars Trivia",
-  "homepage": "swtrivia.kpots.com",
+  "homepage": "https://kadukeitor.github.io/sw-trivia/index.html",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -35,6 +35,8 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "1.3.7",
+    "@ionic/cli-plugin-cordova": "1.0.0",
+    "@ionic/cli-plugin-ionic-angular": "1.0.0",
     "typescript": "~2.2.1"
   },
   "cordovaPlugins": [
@@ -53,5 +55,5 @@
       "locator": "ios"
     }
   ],
-  "description": "sw-trivia: An Ionic project"
+  "description": "Star Wars Trivia"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Star Wars Trivia",
   "app_id": "189a7fc2",
-  "v2": true,
-  "typescript": true
+  "type": "ionic-angular"
 }
